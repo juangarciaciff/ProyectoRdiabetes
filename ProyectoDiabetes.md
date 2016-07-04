@@ -16,32 +16,6 @@ library(dplyr)
 library(plyr)
 ```
 
-    
-    Attaching package: ‘dplyr’
-    
-    The following objects are masked from ‘package:stats’:
-    
-        filter, lag
-    
-    The following objects are masked from ‘package:base’:
-    
-        intersect, setdiff, setequal, union
-    
-    ------------------------------------------------------------------------------
-    You have loaded plyr after dplyr - this is likely to cause problems.
-    If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
-    library(plyr); library(dplyr)
-    ------------------------------------------------------------------------------
-    
-    Attaching package: ‘plyr’
-    
-    The following objects are masked from ‘package:dplyr’:
-    
-        arrange, count, desc, failwith, id, mutate, rename, summarise,
-        summarize
-    
-
-
 ## - Cargar los datos en R.
 
 
@@ -56,7 +30,6 @@ str(data)
 
 
 
-
 <table>
 <thead><tr><th></th><th scope=col>AGE</th><th scope=col>SEX</th><th scope=col>BMI</th><th scope=col>BP</th><th scope=col>S1</th><th scope=col>S2</th><th scope=col>S3</th><th scope=col>S4</th><th scope=col>S5</th><th scope=col>S6</th><th scope=col>Y</th></tr></thead>
 <tbody>
@@ -68,7 +41,6 @@ str(data)
 	<tr><th scope=row>6</th><td>23</td><td>M</td><td>22.6</td><td>89</td><td>139</td><td>64.8</td><td>61</td><td>2</td><td>4.1897</td><td>68</td><td>97</td></tr>
 </tbody>
 </table>
-
 
 
 
@@ -109,7 +81,6 @@ dim(data)
 ```
 
     [1] "Antes:"
-
 
 
 
@@ -399,7 +370,7 @@ ggplot(data, aes(x=data$BMI, y=data$Y)) + geom_line()
 ```
 
 
-![svg](images/output_20_0.svg)
+![svg](output_20_0.svg)
 
 
 
@@ -408,7 +379,7 @@ ggplot(data, aes(x=data$S2, y=data$Y)) + geom_line()
 ```
 
 
-![svg](images/output_21_0.svg)
+![svg](output_21_0.svg)
 
 
 El gráfico de dispersión entre dos variables de correlación 1 es una línea recta de 45%. Por ejemplo el gráfico de dispersión entre la variable Y con sigo misma:
@@ -419,7 +390,7 @@ ggplot(data, aes(x=data$Y, y=data$Y)) + geom_line()
 ```
 
 
-![svg](images/output_23_0.svg)
+![svg](output_23_0.svg)
 
 
 ## - Transformar la variable SEX, que es un factor, en una variable numérica utilizando, por ejemplo, la codificación M=1 y F=2.
@@ -775,7 +746,7 @@ summary(regresion)
     S6             0.3357     0.3535   0.950 0.343058    
     ---
     Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-    
+
     Residual standard error: 55.15 on 279 degrees of freedom
     Multiple R-squared:  0.4997,	Adjusted R-squared:  0.4818 
     F-statistic: 27.87 on 10 and 279 DF,  p-value: < 2.2e-16
